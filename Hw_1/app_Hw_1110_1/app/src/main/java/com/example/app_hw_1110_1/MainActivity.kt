@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val btn=findViewById<Button>(R.id.btn_order)
-        val tv_meal=findViewById<TextView>(R.id.tv_meal)
 
         btn.setOnClickListener(object :View.OnClickListener{
             override fun onClick(p0: View?) {
@@ -24,8 +23,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    override fun onActivityResult(
-        requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         val tv_meal=findViewById<TextView>(R.id.tv_meal)
         if(data==null)return
@@ -35,12 +33,8 @@ class MainActivity : AppCompatActivity() {
                     var str1=b.getString("drink")
                     var str2=b.getString("sugar")
                     var str3=b.getString("ice")
-                    tv_meal.text=String.format("飲料: %s\n\n甜度: " +
-                            "%s\n\n冰塊: %s\n\n",str1,str2,str3)
+                    tv_meal.text=String.format("飲料: %s\n\n甜度: " + "%s\n\n冰塊: %s\n\n",str1,str2,str3)
                 }
             }
-
-
-
     }
 }
