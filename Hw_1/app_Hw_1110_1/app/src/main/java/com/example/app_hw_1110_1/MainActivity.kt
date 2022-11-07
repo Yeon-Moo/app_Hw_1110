@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener(object :View.OnClickListener{
             override fun onClick(p0: View?) {
                 startActivityForResult(
-                    Intent(this@MainActivity, MainActivity2::class.java),
+                    Intent(this@MainActivity,
+                        MainActivity2::class.java),
                     1)
             }
         })
@@ -33,7 +34,8 @@ class MainActivity : AppCompatActivity() {
                     var str1=b.getString("drink")
                     var str2=b.getString("sugar")
                     var str3=b.getString("ice")
-                    tv_meal.text=String.format("飲料: %s\n\n甜度: " + "%s\n\n冰塊: %s\n\n",str1,str2,str3)
+                    tv_meal.text=String.format("飲料: %s\n\n甜度: "
+                            + "%s\n\n冰塊: %s\n\n",str1,str2,str3)
                 }
             }
     }

@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val btn = findViewById<Button>(R.id.button)
         btn.setOnClickListener {
-            val dialog = AlertDialog.Builder(this@MainActivity)
+            val dialog =
+                AlertDialog.Builder(this@MainActivity)
             dialog.setTitle("請選擇功能")
             dialog.setMessage("請根據下方按鈕選擇要顯示的物件")
             dialog.setNeutralButton("取消", object : DialogInterface.OnClickListener {

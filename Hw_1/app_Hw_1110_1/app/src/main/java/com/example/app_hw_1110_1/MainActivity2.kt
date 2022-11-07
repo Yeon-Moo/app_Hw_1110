@@ -36,9 +36,9 @@ class MainActivity2 : AppCompatActivity() {
         rg_ice.setOnCheckedChangeListener(object : RadioGroup.OnCheckedChangeListener{
             override fun onCheckedChanged(p0: RadioGroup?, p1: Int) {
                 when(p1){
-                    R.id.btn_ice_no->"去冰"
-                    R.id.btn_ice_low->"少冰"
-                    R.id.btn_ice_normal->"正常冰"
+                    R.id.btn_ice_no->ice="去冰"
+                    R.id.btn_ice_low->ice="微冰"
+                    R.id.btn_ice_normal->ice="正常冰"
                 }
             }
         })
